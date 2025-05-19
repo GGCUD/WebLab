@@ -1,7 +1,7 @@
 <?php
 // cart.php — страница корзины услуг
-require_once __DIR__ . '/includes/session.php';
-require_once __DIR__ . '/includes/db_connect.php';
+require_once 'session.php';
+require_once 'db_connect.php';
 
 // Инициализируем корзину в сессии
 if (!isset($_SESSION['cart'])) {
@@ -60,7 +60,7 @@ if (!empty($_SESSION['cart'])) {
 }
 ?>
 
-<?php include __DIR__ . '/templates/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <h2>Ваша корзина</h2>
 
@@ -100,4 +100,4 @@ if (!empty($_SESSION['cart'])) {
   </div>
 <?php endif; ?>
 
-<?php include __DIR__ . '/templates/footer.php'; ?>
+<?php include 'footer.php'; ?>

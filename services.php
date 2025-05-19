@@ -1,7 +1,7 @@
 <?php
 // services.php — просмотр и поиск услуг
-require_once __DIR__ . '/includes/session.php';
-require_once __DIR__ . '/includes/db_connect.php';
+require_once 'session.php';
+require_once 'db_connect.php';
 
 // Получаем строку поиска из GET
 $search = trim($_GET['search'] ?? '');
@@ -26,7 +26,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 ?>
 
-<?php include __DIR__ . '/templates/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <h2>Услуги</h2>
 
@@ -61,4 +61,4 @@ $result = $stmt->get_result();
     </tbody>
 </table>
 
-<?php include __DIR__ . '/templates/footer.php'; ?>
+<?php include 'footer.php'; ?>

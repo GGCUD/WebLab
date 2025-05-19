@@ -1,7 +1,6 @@
 <?php
-// register.php — регистрация клиента
-require_once __DIR__ . '/includes/session.php';
-require_once __DIR__ . '/includes/db_connect.php';
+require_once 'session.php';
+require_once 'db_connect.php';
 
 $errors = [];
 
@@ -63,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<?php include __DIR__ . '/templates/header.php'; ?>
+<?php include 'header.php'; ?>
 <h2>Регистрация</h2>
 
 <?php if (!empty($errors)): ?>
@@ -84,4 +83,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <button type="submit">Зарегистрироваться</button>
 </form>
 
-<?php include __DIR__ . '/templates/footer.php'; ?>
+<?php include 'footer.php'; ?>

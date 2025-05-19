@@ -1,7 +1,7 @@
 <?php
 // order.php — оформление заявки
-require_once __DIR__ . '/includes/auth.php';      // старт сессии, проверка авторизации, $current_user
-require_once __DIR__ . '/includes/db_connect.php';
+require_once 'auth.php';      // старт сессии, проверка авторизации, $current_user
+require_once 'db_connect.php';
 
 $user_id = $current_user['id_klient'];
 $errors = [];
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-include __DIR__ . '/templates/header.php';
+include 'header.php';
 ?>
 
 <h2>Оформить новую заявку</h2>
@@ -117,4 +117,4 @@ include __DIR__ . '/templates/header.php';
   <button type="submit">Отправить заявку</button>
 </form>
 
-<?php include __DIR__ . '/templates/footer.php'; ?>
+<?php include 'footer.php'; ?>

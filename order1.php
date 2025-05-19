@@ -1,7 +1,7 @@
 <?php
 // order.php — оформление заявки из корзины
-require_once __DIR__ . '/includes/auth.php';      // старт сессии, проверка авторизации, $current_user
-require_once __DIR__ . '/includes/db_connect.php';
+require_once 'auth.php';      // старт сессии, проверка авторизации, $current_user
+require_once 'db_connect.php';
 
 $user_id = $current_user['id_klient'];
 $errors = [];
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm'])) {
     exit;
 }
 
-include __DIR__ . '/templates/header.php';
+include __DIR__ . 'header.php';
 ?>
 
 <h2>Оформление заявки</h2>

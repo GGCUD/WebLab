@@ -1,7 +1,7 @@
 <?php
 // profile.php — личный кабинет клиента
-require_once __DIR__ . '/includes/auth.php';      // старт сессии, проверка авторизации, получает $current_user
-require_once __DIR__ . '/includes/db_connect.php';
+require_once 'auth.php';      // старт сессии, проверка авторизации, получает $current_user
+require_once 'db_connect.php';
 
 $user = $current_user;  // данные из auth.php
 
@@ -23,7 +23,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 ?>
 
-<?php include __DIR__ . '/templates/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <h2>Добро пожаловать, <?= htmlspecialchars($user['full_name'], ENT_QUOTES, 'UTF-8') ?>!</h2>
 
@@ -41,7 +41,7 @@ $result = $stmt->get_result();
 <section>
   <h3>Ваши заявки</h3>
   <?php if ($result->num_rows === 0): ?>
-    <p>У вас ещё нет заявок. <a href="/order.php">Оформить новую</a></p>
+    <p>У вас ещё нет заявок. <a href="order.php">Оформить новую</a></p>
   <?php else: ?>
     <table class="data-table">
       <thead>
@@ -70,4 +70,4 @@ $result = $stmt->get_result();
   <?php endif; ?>
 </section>
 
-<?php include __DIR__ . '/templates/footer.php'; ?>
+<?php include 'footer.php'; ?>
