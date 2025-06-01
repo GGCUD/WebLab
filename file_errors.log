@@ -1,0 +1,177 @@
+{
+    "datetime": "2025-05-27 01:29:09",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "nonexistent.txt",
+        "dest": "copy.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:29:09",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "existing.txt",
+        "dest": "existing.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:29:09",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "source.txt",
+        "dest": "destination.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:29:09",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "non_existent.txt",
+        "dest": "copy1.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:29:09",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "existing.txt",
+        "dest": "existing.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:35:36",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "non_existent.txt",
+        "dest": "copy1.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:35:36",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "existing.txt",
+        "dest": "existing.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:35:36",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "valid_source.txt",
+        "dest": "valid_dest.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:36:17",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "non_existent.txt",
+        "dest": "copy1.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:36:17",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "existing.txt",
+        "dest": "existing.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:36:17",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "valid_source.txt",
+        "dest": "valid_dest.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:37:06",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "non_existent.txt",
+        "dest": "copy1.txt"
+    }
+}{
+    "datetime": "2025-05-27 01:37:06",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "existing.txt",
+        "dest": "existing.txt"
+    }
+}{
+    "datetime": "2025-05-27 10:55:13",
+    "errno": 256,
+    "errtype": "\u041a\u0440\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
+    "errmsg": "\u0418\u0441\u0445\u043e\u0434\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 32,
+    "context": {
+        "source": "non_existent.txt",
+        "dest": "copy1.txt"
+    }
+}{
+    "datetime": "2025-05-27 10:55:13",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "existing.txt",
+        "dest": "existing.txt"
+    }
+}{
+    "datetime": "2025-05-27 10:55:13",
+    "errno": 512,
+    "errtype": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+    "errmsg": "\u0426\u0435\u043b\u0435\u0432\u043e\u0439 \u0444\u0430\u0439\u043b \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442",
+    "script": "E:\\OpenServer\\domains\\localhost\\file_unctions.php",
+    "line": 37,
+    "context": {
+        "source": "valid_source.txt",
+        "dest": "valid_dest.txt"
+    }
+}

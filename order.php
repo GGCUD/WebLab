@@ -67,54 +67,193 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 include 'header.php';
 ?>
 
-<h2>Оформить новую заявку</h2>
+<main class="order-container">
+    <h1 class="page-title">Новая заявка</h1>
 
-<?php if (!empty($errors)): ?>
-  <ul class="errors">
-    <?php foreach ($errors as $err): ?>
-      <li><?= e($err) ?></li>
-    <?php endforeach; ?>
-  </ul>
-<?php endif; ?>
+    <?php if (!empty($errors)): ?>
+        <div class="alert-error">
+            <?php foreach ($errors as $err): ?>
+                <div class="error-item"><?= e($err) ?></div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 
-<form method="get" action="">
-  <label>Фильтр по специализации:</label>
-  <select name="spec_id" onchange="this.form.submit()">
-    <option value="">— Все специализации —</option>
-    <?php foreach ($specializations as $spec): ?>
-      <option value="<?= $spec['id_specialization'] ?>"
-        <?= $spec_id == $spec['id_specialization'] ? 'selected' : '' ?>>
-        <?= htmlspecialchars($spec['name'], ENT_QUOTES, 'UTF-8') ?>
-      </option>
-    <?php endforeach; ?>
-  </select>
-</form>
+    <!-- Фильтр специализаций -->
+    <div class="filter-section">
+        <form method="get" class="specialization-filter">
+            <label>Специализация юриста:</label>
+            <select name="spec_id" onchange="this.form.submit()" class="styled-select">
+                <option value="">Все специализации</option>
+                <?php foreach ($specializations as $spec): ?>
+                    <option value="<?= $spec['id_specialization'] ?>"
+                        <?= $spec_id == $spec['id_specialization'] ? 'selected' : '' ?>>
+                        <?= htmlspecialchars($spec['name']) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </form>
+    </div>
 
-<form method="post" action="">
-  <h3>Выберите юриста</h3>
-  <?php if (empty($workers) && $spec_id): ?>
-    <p>Нет юристов в данной специализации.</p>
-  <?php else: ?>
-    <?php foreach ($workers as $w): ?>
-      <label>
-        <input type="radio" name="id_worker" value="<?= $w['id_worker'] ?>"
-          <?= ($_POST['id_worker'] ?? '') == $w['id_worker'] ? 'checked' : '' ?>>
-        <?= htmlspecialchars($w['full_name'], ENT_QUOTES, 'UTF-8') ?>
-      </label><br>
-    <?php endforeach; ?>
-  <?php endif; ?>
+    <form method="post" class="order-form">
+        <!-- Блок выбора юриста -->
+        <section class="form-section">
+            <h2 class="section-title">Выберите юриста</h2>
+            
+            <?php if (empty($workers) && $spec_id): ?>
+                <div class="empty-state">Нет доступных юристов</div>
+            <?php else: ?>
+                <div class="workers-grid">
+                    <?php foreach ($workers as $w): ?>
+                        <label class="worker-card">
+                            <input type="radio" name="id_worker" value="<?= $w['id_worker'] ?>" 
+                                <?= ($_POST['id_worker'] ?? '') == $w['id_worker'] ? 'checked' : '' ?>>
+                            <div class="card-content">
+                                <h3><?= htmlspecialchars($w['full_name']) ?></h3>
+                            </div>
+                        </label>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+        </section>
 
-  <h3>Услуги</h3>
-  <?php foreach ($services as $s): ?>
-    <label>
-      <input type="checkbox" name="services[]" value="<?= $s['id_service'] ?>"
-        <?= in_array($s['id_service'], $_POST['services'] ?? []) ? 'checked' : '' ?>>
-      <?= htmlspecialchars($s['service_name'], ENT_QUOTES, 'UTF-8') ?>
-      (<?= number_format($s['price'], 0, '.', ' ') ?> ₽)
-    </label><br>
-  <?php endforeach; ?>
+        <!-- Блок выбора услуг -->
+        <section class="form-section">
+            <h2 class="section-title">Выберите услуги</h2>
+            
+            <div class="services-grid">
+                <?php foreach ($services as $s): ?>
+                    <label class="service-card">
+                        <input type="checkbox" name="services[]" value="<?= $s['id_service'] ?>"
+                            <?= in_array($s['id_service'], $_POST['services'] ?? []) ? 'checked' : '' ?>>
+                        <div class="card-content">
+                            <h3><?= htmlspecialchars($s['service_name']) ?></h3>
+                            <div class="price"><?= number_format($s['price'], 0, '.', ' ') ?> ₽</div>
+                        </div>
+                    </label>
+                <?php endforeach; ?>
+            </div>
+        </section>
 
-  <button type="submit">Отправить заявку</button>
-</form>
+        <div class="form-actions">
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </div>
+    </form>
+</main>
+
+<style>
+    /* Основные стили */
+    .order-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        color: #2d3748;
+        margin-bottom: 2rem;
+    }
+
+    /* Фильтр */
+    .specialization-filter {
+        margin-bottom: 2rem;
+    }
+
+    .styled-select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        background: white;
+        font-size: 1rem;
+    }
+
+    /* Карточки */
+    .workers-grid,
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .worker-card,
+    .service-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        background: white;
+        position: relative;
+    }
+
+    .worker-card input[type="radio"],
+    .service-card input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .worker-card:hover,
+    .service-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .worker-card input:checked + .card-content,
+    .service-card input:checked + .card-content {
+        border-color: #4299e1;
+        background: #ebf8ff;
+    }
+
+    .card-content {
+        padding: 1rem;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        transition: all 0.2s;
+    }
+
+    /* Стили для услуг */
+    .price {
+        color: #38a169;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+
+    /* Кнопка отправки */
+    .submit-btn {
+        margin-top: 15px;
+        background: #4299e1;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+        background: #3182ce;
+    }
+
+    /* Сообщения об ошибках */
+    .alert-error {
+        background: #fff5f5;
+        color: #c53030;
+        padding: 1rem;
+        border-radius: 6px;
+        margin-bottom: 2rem;
+        border: 1px solid #fed7d7;
+    }
+
+    @media (max-width: 768px) {
+        .workers-grid,
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 
 <?php include 'footer.php'; ?>
