@@ -7,8 +7,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $smtpHost = 'smtp.gmail.com';     
-$smtpUsername = 'seregariabchenok@gmail.com'; 
-$smtpPassword = 'iddc krhg hjhd htzh';
+$smtpUsername = ''; 
+$smtpPassword = '';
 $smtpPort = 587;                   
 $smtpSecure = 'tls';                 
 
